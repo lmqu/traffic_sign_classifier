@@ -11,6 +11,7 @@ and starter code. Be sure to download the [Ipython notebook](https://github.com/
 We also want you to create a detailed writeup of the project. Check out the [writeup template](https://github.com/udacity/CarND-Traffic-Sign-Classifier-Project/blob/master/writeup_template.md) for this project and use it as a starting point for creating your own writeup. The writeup can be either a markdown file or a pdf document.
 
 To meet specifications, the project will require submitting three files: 
+
 * the Ipython notebook with the code
 * the code exported as an html file
 * a writeup report either as a markdown or pdf file 
@@ -26,6 +27,7 @@ You're not required to use markdown for your writeup.  If you use another method
 The Project
 ---
 The goals / steps of this project are the following:
+
 * Load the data set
 * Explore, summarize and visualize the data set
 * Design, train and test a model architecture

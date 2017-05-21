@@ -6,6 +6,7 @@
 **Build a Traffic Sign Recognition Project**
 
 The goals / steps of this project are the following:
+
 * Load the data set (see below for links to the project data set)
 * Explore, summarize and visualize the data set
 * Design, train and test a model architecture
@@ -26,15 +27,9 @@ The goals / steps of this project are the following:
 [image8]: ./examples/placeholder.png "Traffic Sign 5"
 [image9]: ./examples/histogram.png
 
-## Rubric Points
-###Here I will consider the [rubric points](https://review.udacity.com/#!/rubrics/481/view) individually and describe how I addressed each point in my implementation.  
 
 ---
-###Writeup / README
 
-####1. Provide a Writeup / README that includes all the rubric points and how you addressed each one. You can submit your writeup as markdown or pdf. You can use this template as a guide for writing the report. The submission includes the project code.
-
-You're reading it! and here is a link to my [project code](https://github.com/udacity/CarND-Traffic-Sign-Classifier-Project/blob/master/Traffic_Sign_Classifier.ipynb)
 
 ###Data Set Summary & Exploration
 
@@ -132,32 +127,58 @@ Here are the results of the prediction:
 | Image			        |     Prediction	        					| 
 |:---------------------:|:---------------------------------------------:| 
 | Speed Limit (50 km/h)     		| Speed Limit (50 km/h) 									| 
-| Roundabout mandatory  			| U-turn 										|
-| Priority Road					| Yield											|
-| Stop      		| Bumpy Road					 				|
+| Roundabout mandatory  			| Roundabout mandatory 										|
+| Priority Road					| Priority Road											|
+| Stop      		| Stop				 				|
 | Bumpy Road			| Bumpy Road      							|
 
 
-The model was able to correctly guess 4 of the 5 traffic signs, which gives an accuracy of 80%. This compares favorably to the accuracy on the test set of ...
+The model was able to correctly guess 5 of the 5 traffic signs, which gives an accuracy of 100%. This compares favorably to the accuracy on the test set of 93.3%
 
 ####3. Describe how certain the model is when predicting on each of the five new images by looking at the softmax probabilities for each prediction. Provide the top 5 softmax probabilities for each image along with the sign type of each probability. (OPTIONAL: as described in the "Stand Out Suggestions" part of the rubric, visualizations can also be provided such as bar charts)
 
-The code for making predictions on my final model is located in the 11th cell of the Ipython notebook.
+The code for making predictions on my final model is located in the 39th cell of the Ipython notebook.
 
-For the first image, the model is relatively sure that this is a stop sign (probability of 0.6), and the image does contain a stop sign. The top five soft max probabilities were
+For the first image, the model is very sure about the prediction, and the prediction is indeed correct.
 
 | Probability         	|     Prediction	        					| 
 |:---------------------:|:---------------------------------------------:| 
-| .60         			| Stop sign   									| 
-| .20     				| U-turn 										|
-| .05					| Yield											|
-| .04	      			| Bumpy Road					 				|
-| .01				    | Slippery Road      							|
+|  1.0  |Speed limit (50km/h)  |
+| 1.18405e-09   |Speed limit (80km/h)  |
+|   5.49132e-12 |Speed limit (30km/h)  |
+| 4.63132e-13    |Children crossing  |
+|  6.54821e-14  |Speed limit (120km/h)  |
 
+The same can be said for the rest of the images:
 
-For the second image ... 
+* Image 2 Top 5 probabilities:
+Roundabout mandatory probability = 0.999997
+Go straight or right probability = 1.66767e-06
+End of no passing by vehicles over 3.5 metric tons probability = 1.21363e-06
+End of no passing probability = 2.5054e-07
+Vehicles over 3.5 metric tons prohibited probability = 2.28126e-09
 
-### (Optional) Visualizing the Neural Network (See Step 4 of the Ipython notebook for more details)
-####1. Discuss the visual output of your trained network's feature maps. What characteristics did the neural network use to make classifications?
+* Image 3 Top 5 probabilities:
+Priority road probability = 1.0
+Right-of-way at the next intersection probability = 3.20459e-11
+Traffic signals probability = 2.51693e-15
+No passing for vehicles over 3.5 metric tons probability = 5.70694e-16
+Double curve probability = 9.23064e-18
+
+* Image 4 Top 5 probabilities:
+Stop probability = 0.999501
+Speed limit (30km/h) probability = 0.000264854
+Speed limit (50km/h) probability = 0.000176606
+Road work probability = 3.57683e-05
+Speed limit (60km/h) probability = 1.55938e-05
+
+* Image 5 Top 5 probabilities:
+Bumpy road probability = 1.0
+Bicycles crossing probability = 2.40196e-10
+Beware of ice/snow probability = 1.80695e-14
+Children crossing probability = 4.54747e-16
+Road work probability = 2.12586e-16
+
+So one can conclude the model works really well on the five images here.
 
 
